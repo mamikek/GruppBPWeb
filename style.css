@@ -1,0 +1,20 @@
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid yellow;
+    background-color: gray;
+    border-radius: 5px;
+
+    position: sticky;
+}
+
+aside {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid yellow;
+    background-color: gray;
+    border-radius: 5px;
+
+    position: sticky;
+}
+
