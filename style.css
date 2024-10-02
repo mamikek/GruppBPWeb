@@ -56,7 +56,7 @@ footer {
 }
 
 .flex-container > div{ /* Gives options to the boxes  */
-    border: 3px solid red;
+    border: 3px solid yellow;
     border-radius: 10px;
 }
 
