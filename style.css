@@ -1,65 +1,94 @@
 header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 1px solid yellow;
-    background-color: gray;
+    height: 100%;
+    width: auto;
+
+    padding-top: 50px;
+    padding-bottom: 0px;
+    border: 5px solid yellow;
+    background-color: lightgray;
     border-radius: 10px;
 
     position: sticky;
 
-    margin: 10px;
-}
+    display: flex;
+    flex-direction: row;
 
-.asideLeft {
-    width: 30px;
-    padding-left: 30px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-right: 30px;
-    
-    float: left;
-    
-    border: 1px solid yellow;
-    background-color: gray;
-    border-radius: 10px;
+    gap: 10px;
 
-    margin: 10px;
-}
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 
-.asideRight {
-    width: 30px;
-    
-    padding-left: 30px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-right: 30px;
-    
-    float: right;
-    
-    border: 1px solid yellow;
-    background-color: gray;
-    border-radius: 10px;
-
-   
+    font-size: 40px;
 }
 
 footer {
     padding-top: 30px;
     padding-bottom: 30px;
     
-    border: 1px solid yellow;
-    background-color: gray;
+    border: 5px solid yellow;
+    background-color: lightgray;
     border-radius: 10px;
 
-    margin: 10px;
+    text-align: center;
 }
 
-main {
-    padding-top: 50px;
-    padding-bottom: 100px;
-    border: 1px solid yellow;
-    background-color: gray;
-    border-radius: 5px;
-    border-radius: 10px;
+.Avatar {
+    margin-left: auto;
+}
+
+/* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  */
+
+.flex-container { /* Gives options to the whole flexbox  */
+    display: flex;
+    flex-direction: row;
     
+    align-items: stretch;
+    
+    height: 100%;
+    gap: 40px;
+    justify-content: space-evenly;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.flex-container > div{ /* Gives options to the boxes  */
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+.SidePanel {
+    width: 200px;
+
+    background-color: lightgray;
+    font-size: 40px;
+    
+
+    flex-grow: 1;
+}
+
+.flex-MainPanel {
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+    width: auto;
+    
+    background-color: rgb(240, 240, 240);
+    
+    min-width: 500px;
+}
+
+.Post {
+    width: auto;
+    height: auto;
+    
+
+    padding: 0px; /* side */
+    margin: 10px;
+
+    background-color: cyan;
 }
