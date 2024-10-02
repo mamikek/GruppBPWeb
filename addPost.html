@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group BP Homepage</title>
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add post</title>
+        <link rel="stylesheet" href="style_addpost.css">
+
 </head>
 <body>
     <div>
         <header class="header">
-            <ul>
-                <li>
-                    <a href="#">Home</a> |
-                    <a href="#">Addpage</a>
-                </li>
-            </ul>
+            <div class="ClickText">
+                <a href="index.html">Home</a>
+            </div>
+
+            <div class="ClickText">
+                <a>|</a>
+            </div>
+
+            <div class="ClickText">
+                <a href="addPost.html">Addpage</a>
+            </div>
         </header>
         
-        <form name="post" action="">
-            <table id="postForm" class="postForm hideMobile" style="display: table;">
-                <tbody>
-                    <tr> data-type="Name" 
-                        <td>Post body</td>
-                        <td>
-                            <input name="Pbody" type="text" tabindex="1">
-                        </td>
-                    </tr>
-                    <tr data-type="File">
-                        <td>File</td>
-                        <td>
-                            <input id="postFile" name="upfile" type="file" tabindex="8">
-                        </td>
-                        <td>
-                            <input type="submit" value="Post" tabindex="1">
-                        </td>
-                    </tr>
-                </tbody>
-        </form>
+        <div class="flex-container">
+            <div class="central_form">
+                        <form name="post" action="" method="post"> <!--need to get some kind of posting action to work?-->
+                            <div class="l-container">
+                                <label for="pbody">Post body</label><br>
+                            </div>
+                            <div class="l-container">
+                                <textarea name="pbody" id="pbody" rows="5" cols="40" placeholder="Write here..."></textarea><br>
+                            </div>
+                            <div class="l-container">
+                                <label for="filesel" class="file-input">Select file</label>   
+                            </div>
+                            <div class="l-container">
+                                <input type="file" id="filesel" class="file-input-2"> <br>
+                            </div>
+                            <button type="submit">Submit post</button>
+                        </form>
+            </div>
         </div>
-
+    </div>
 </body>
 </html>
