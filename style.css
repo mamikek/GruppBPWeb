@@ -42,7 +42,13 @@ footer {
 }
 
 .Avatar {
+    padding-top: 10px;
     margin-left: auto;
+}
+
+.Avatar img {
+    width: 150px;
+    height: 150px;
 }
 
 .Picture {
@@ -52,8 +58,20 @@ footer {
 }
 
 /*MOBILE SETTINGS*//*MOBILE SETTINGS*//*MOBILE SETTINGS*//*MOBILE SETTINGS*/
-@media only screen and (max-width:500px) {
-    
+@media (max-width:700px) {
+    .Avatar img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .SidePanel {
+        visibility: collapse;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        gap: 0%; /* Broken in Google Chrome */
+    }
 }
 
 /* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  */
@@ -80,7 +98,6 @@ footer {
     border: 3px solid yellow;
     border-radius: 10px;
     
-
     flex-grow: 1;
 }
 
@@ -93,7 +110,7 @@ footer {
     
     /*background-color: rgb(240, 114, 114);*/
     
-    min-width: 500px;
+    min-width: 490px;
 }
 
 .Post {
