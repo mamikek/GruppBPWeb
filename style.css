@@ -46,10 +46,14 @@ footer {
 }
 
 .Picture {
-    object-fit: cover;
+    max-height: 500px;
+    width: auto;
+    height: 100%;
+}
+
+/*MOBILE SETTINGS*//*MOBILE SETTINGS*//*MOBILE SETTINGS*//*MOBILE SETTINGS*/
+@media only screen and (max-width:500px) {
     
-    height: auto;
-    max-height: 20%;
 }
 
 /* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  *//* FLEXBOX  */
@@ -87,7 +91,7 @@ footer {
     height: auto;
     width: auto;
     
-    background-color: rgb(240, 114, 114);
+    /*background-color: rgb(240, 114, 114);*/
     
     min-width: 500px;
 }
