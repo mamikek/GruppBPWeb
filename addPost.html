@@ -1,46 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Add post</title>
-        <link rel="stylesheet" href="style_addpost.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add post</title>
+    <link rel="stylesheet" href="style_addpost.css">
 
 </head>
 <body>
     <div>
         <header class="header">
             <div class="ClickText">
-                <a href="index.html">Home</a>
+                <a href="index.html" id="homelink">Home</a>
             </div>
-
-            <div class="ClickText">
-                <a>|</a>
-            </div>
-
-            <div class="ClickText">
-                <a href="addPost.html">Addpage</a>
+            <div class="Avatar">
+                <img src="Pictures/Profile/Drip.jpg" alt="Avatar" width="100" height="100">
             </div>
         </header>
         
         <div class="flex-container">
             <div class="central_form">
-                        <form name="post" action="" method="post"> <!--need to get some kind of posting action to work?-->
-                            <div class="l-container">
-                                <label for="pbody">Post body</label><br>
-                            </div>
-                            <div class="l-container">
-                                <textarea name="pbody" id="pbody" rows="5" cols="40" placeholder="Write here..."></textarea><br>
-                            </div>
-                            <div class="l-container">
-                                <label for="filesel" class="file-input">Select file</label>   
-                            </div>
-                            <div class="l-container">
-                                <input type="file" id="filesel" class="file-input-2"> <br>
-                            </div>
-                            <button type="submit">Submit post</button>
-                        </form>
+                <form name="post" action="index.html" method="get"> <!--need to get some kind of posting action to work?-->
+                    <div class="l-container">
+                        <label for="pbody">Post body</label><br>
+                    </div>
+                    <div class="l-container">
+                        <textarea name="pbody" id="pbody" rows="5" cols="40" placeholder="Write here..."></textarea><br>
+                    </div>
+                    <div class="l-container">
+                        <label for="filesel" class="file-input">Select file</label>   
+                    </div>
+                    <div class="l-container">
+                        <input type="file" id="filesel" class="file-input-2"> <br>
+                    </div>
+                    <button type="submit" >Submit post</button>
+                </form>
             </div>
         </div>
     </div>

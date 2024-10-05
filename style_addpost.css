@@ -41,7 +41,7 @@ textarea {
     border-radius: 4px;
     resize: none;
 }
-button{
+.l-container+button{
     margin-top: 20%;
     margin-left: 40%;
     background-color: rgb(50, 151, 246);
@@ -51,6 +51,9 @@ button{
     padding-top: 3%;
     padding-bottom: 3%;
     color:whitesmoke ;       
+}
+button:hover {
+background-color: aquamarine;
 }
 .flex-container { /* Gives options to the whole flexbox  */
     display: flex;
@@ -65,7 +68,7 @@ button{
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.central_form {
+.flex-container .central_form {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -92,8 +95,21 @@ button{
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s; /* Smooth transition */
-
+}
+.file-input:hover {
+    background-color: aquamarine;
 }
 .file-input-2 {
     display: none;
+}
+header > .Avatar {
+    margin-left: auto;
+}
+
+#homelink:hover {
+color: aquamarine;
+}
+
+.ClickText ~  {
+
 }
