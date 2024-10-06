@@ -1,5 +1,8 @@
-# GruppBPWeb
+# Welcome to GruppBP webpage
 
+## Authors
+- Raoul Köömnemägi
+- Karl-Martkus Kaiv
+- Mirko Martjak
 
-### MEIE ÜHINE PRJEKT XDD
-
+### Tartu Ülikool 2024
