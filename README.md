@@ -2,7 +2,7 @@
 
 ## Authors
 - Raoul Köömnemägi
-- Karl-Martkus Kaiv
+- Karl-Markus Kaiv
 - Mirko Martjak
 
 ### Tartu Ülikool 2024
