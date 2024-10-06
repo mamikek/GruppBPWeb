@@ -144,3 +144,12 @@ footer {
 .PostHead > .AvatarMini {
     margin-right: auto;
 }
+
+#headdiv ~ .AnyText a:hover {
+    color: aquamarine;
+}
+
+#homelink:hover {
+    color: aquamarine;
+    }
+    
