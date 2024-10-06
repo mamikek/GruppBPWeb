@@ -104,6 +104,7 @@ background-color: aquamarine;
 }
 header > .Avatar {
     margin-left: auto;
+
 }
 
 #homelink:hover {
@@ -113,3 +114,15 @@ color: aquamarine;
 .ClickText ~  {
 
 }
+.Avatar img{
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width:650px) {
+    .Avatar img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
