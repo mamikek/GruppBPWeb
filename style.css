@@ -10,13 +10,11 @@ header {
     height: 100%;
     width: auto;
 
-    padding-top: 50px;
-    padding-bottom: 0px;
     border: 5px solid yellow;
     background-color: lightgray;
     border-radius: 10px;
 
-    position: sticky;
+    position: relative;
 
     display: flex;
     flex-direction: row;
@@ -49,8 +47,8 @@ footer {
 }
 
 .Avatar img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .Picture {
@@ -93,7 +91,7 @@ footer {
 }
 
 .SidePanel {
-    width: 100px;
+    width: 300px;
 
     background-color: lightgray;
     font-size: 40px;
@@ -105,12 +103,14 @@ footer {
 
 .flex-MainPanel {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
 
-    height: 50%;
-    width: 50%;
+    height: auto;
+    width: auto;
     
     /*background-color: rgb(240, 114, 114);*/
+    
+    min-width: 490px;
 }
 
 .Post {
