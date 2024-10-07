@@ -14,7 +14,7 @@ header {
     background-color: lightgray;
     border-radius: 10px;
 
-    position: sticky;
+    position: relative;
 
     display: flex;
     flex-direction: row;
