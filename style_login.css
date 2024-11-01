@@ -68,7 +68,8 @@ header {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="username"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;

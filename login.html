@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="style_login.css">
+
 </head>
+
 <body>
+
     <div>
         <header class="header_login">
             <div class="ClickText">
-                <a href="index.html" id="homelink">Home</a>
+                <a href="index.html">Home</a>
             </div>
             <div class="Avatar">
-                <img src="Pictures/Profile/Drip.jpg" alt="Avatar">
+                <img src="Pictures/Profile/Drip.jpg" alt="Avatar" width="100" height="100">
             </div>
         </header>
     </div>
@@ -23,12 +27,19 @@
         <a href="#" class="create-account">Create an account</a>
         <p>or</p>
         <p>Please log in</p>
-        <form id="loginForm" action="index.html">
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
+         <!-- Login Form -->
+         <form id="loginForm" action="index.html" onsubmit="saveUserInfo()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
             <button type="submit" class="submit-button">Log In</button>
         </form>
         <a href="#" class="forgot-password">Forgot password</a>
     </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="Scripts/login.js"></script>
+
 </body>
+
 </html>
