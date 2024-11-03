@@ -1,0 +1,94 @@
+[
+    {
+        "creation_date": "Jan 7, 2025",
+        "post_text": "testi postitus",
+        "poster_avatar_path": "./Pictures/user_icon.png",
+        "post_media_path": "./Pictures/PostPicture/p2.jpg", 
+
+        "poster_name": "admin",
+        "creation_time": "19:04"
+    },
+    {
+        "creation_date": "Feb 8, 2025",
+        "post_text": "another small forum?",
+        "poster_avatar_path": "./Pictures/user_icon.png",
+        "post_media_path": "./Pictures/PostPicture/p11.jpg", 
+
+        "poster_name": "long_name69",
+        "creation_time": "10:10"
+    },
+    {
+        "creation_date": "Feb 12, 2025",
+        "post_text": "why was this website made...",
+        "poster_avatar_path": "./Pictures/user_icon.png",
+        "post_media_path": "./Pictures/PostPicture/p10.png", 
+
+        "poster_name": "user1111",
+        "creation_time": "18:00"
+
+    },
+    {
+        "creation_date": "Feb 24, 2025",
+        "post_text": "test post",
+        "poster_avatar_path": "./Pictures/user_icon.png",
+        "post_media_path": "./Pictures/PostPicture/p1.jpg", 
+
+        "poster_name": "admin",
+        "creation_time": "00:00"
+    },
+    {
+        "creation_date": "Feb 29, 2025",
+        "post_text": "parim maskott on pingviin",
+        "poster_avatar_path": "./Pictures/user_icon.png",
+        "post_media_path": "./Pictures/PostPicture/p8.jpg", 
+
+        "poster_name": "linuxlover27",
+        "creation_time": "00:57"
+    },
+    {
+        "creation_date": "Mar 3, 2025",
+        "post_text": "täna on meri ilus",
+        "poster_avatar_path": "./Pictures/user_icon.png",
+        "post_media_path": "./Pictures/PostPicture/p12.png", 
+
+        "poster_name": "linuxlover27",
+        "creation_time": "08:40"
+    },
+    {
+        "creation_date": "Mar 7, 2025",
+        "post_text": "dollars are funny money",
+        "poster_avatar_path": "./Pictures/user_icon.png",
+        "post_media_path": "./Pictures/PostPicture/p3.png", 
+
+        "poster_name": "user1111",
+        "creation_time": "06:00"
+    },
+    {
+        "creation_date": "Mar 26, 2025",
+        "post_text": "terry ehitas valmis jumala digitaalse templi",
+        "poster_avatar_path": "./Pictures/user_icon.png",
+        "post_media_path": "./Pictures/PostPicture/p9.jpg", 
+
+        "poster_name": "admin",
+        "creation_time": "17:32"
+    },
+    {
+        "creation_date": "Apr 6, 2025",
+        "post_text": "true, but same applies to all fiat currencies",
+        "poster_avatar_path": "./Pictures/user_icon.png",
+        "post_media_path": "./Pictures/PostPicture/p5.jpg", 
+
+        "poster_name": "admin",
+        "creation_time": "14:11"
+    },
+    {
+        "creation_date": "May 11, 2025",
+        "post_text": "toit on kuidagi jube kalliks läinud viiamastel aastatel...",
+        "poster_avatar_path": "./Pictures/Drip.jpg",
+        "post_media_path": "./Pictures/PostPicture/p7.jpg", 
+
+        "poster_name": "keepkalmkomplain",
+        "creation_time": "11:06"
+    }
+
+]
