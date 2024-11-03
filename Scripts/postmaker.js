@@ -34,8 +34,8 @@ window.onload = function() {
 
                     MainText.innerHTML = `${singleInfo.poster_name} ${singleInfo.creation_date} ${singleInfo.creation_time}`
                     text.innerHTML = singleInfo.post_text;
-                    PostImage.innerHTML = singleInfo.post_media_path;
-                    ImageAvatar.innerHTML = singleInfo.poster_avatar_path;
+                    PostImage.src = singleInfo.post_media_path;
+                    ImageAvatar.src = singleInfo.poster_avatar_path;
                     
                     
                     MiniAvatar.appendChild(ImageAvatar);
