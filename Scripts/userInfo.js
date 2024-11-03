@@ -6,7 +6,7 @@ function displayUserInfo() {
     if (username && email) {
         document.getElementById('user-name').textContent = `Username: ${username}`;
         document.getElementById('user-email').textContent = `Email: ${email}`;
-    } else {
+    } else { 
         console.warn('User information is missing in localStorage');
     }
 }

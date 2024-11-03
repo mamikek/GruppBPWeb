@@ -1,41 +1,46 @@
-/* Basic Reset */
-header {
-    height: 100%;
-    width: auto;
 
-    padding-top: 50px;
-    padding-bottom: 0px;
-    border: 5px solid yellow;
-    background-color: lightgray;
-    border-radius: 10px;
-
-    position: sticky;
-
-    display: flex;
-    flex-direction: row;
-
-    gap: 10px;
-
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    font-size: 40px;
-}
-.Avatar {
-    margin-left: auto;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Header */
+header {
+    height: 100%;
+    width: auto;
+    border: 3px solid #739e49;
+    background-color: #2e2b2b;
+    border-radius: 10px;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 40px;
+}
+body { /* Backgound and text color */
+    color: white;
+    background-color: #000000;
+}
+
+.Avatar {
+    margin-left: auto;
+}
+
+.Avatar img {
+    border: 3px solid #739e49;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
 /* Form Container */
 .form-container {
-    background-color: #e0e0e0;
+    background-color: #2e2b2b;
+    border: 3px solid #739e49;
+    color: white;
     padding: 20px;
     width: 300px;
     margin: 100px auto;
@@ -57,7 +62,7 @@ header {
 
 .form-container p {
     font-size: 14px;
-    color: black;
+    color: white;
 }
 
 #loginForm {
@@ -69,7 +74,7 @@ header {
 
 input[type="email"],
 input[type="password"],
-input[type="username"] {
+input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -77,7 +82,7 @@ input[type="username"] {
 }
 
 .submit-button {
-    background-color: #1a3d7c;
+    background-color: #739e49;
     color: white;
     padding: 10px;
     border: none;
@@ -86,7 +91,7 @@ input[type="username"] {
 }
 
 .submit-button:hover {
-    background-color: #123663;
+    background-color: aquamarine;
 }
 
 .forgot-password {
@@ -95,18 +100,13 @@ input[type="username"] {
     font-size: 12px;
 }
 
-.Avatar img{
-    width: 100px;
-    height: 100px;
-}
-
-@media (max-width:650px) {
+@media (max-width: 650px) {
     .Avatar img {
         width: 50px;
         height: 50px;
     }
 }
+
 #homelink:hover {
     color: aquamarine;
-    }
-    
+}
