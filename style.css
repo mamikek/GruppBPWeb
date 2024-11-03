@@ -62,6 +62,11 @@ body { /* Backgound and text color */
     background-color: #000000;
 }
 
+.ProfileMini {
+    width: 40px;
+    height: 40px;
+}
+
 /*MOBILE SETTINGS*//*MOBILE SETTINGS*//*MOBILE SETTINGS*//*MOBILE SETTINGS*/
 @media (max-width:700px) {
     .Avatar img {

@@ -23,6 +23,7 @@ window.onload = function() {
                     plot.classList.add("Plot");
 
                     const ImageAvatar = document.createElement("img");
+                    ImageAvatar.classList.add("ProfileMini");
 
                     const MainText = document.createElement("h2");
                     MainText.classList.add("Anytext")
@@ -37,13 +38,12 @@ window.onload = function() {
                     PostImage.src = singleInfo.post_media_path;
                     ImageAvatar.src = singleInfo.poster_avatar_path;
                     
-                    
                     MiniAvatar.appendChild(ImageAvatar);
                     PostHead.appendChild(MiniAvatar);
                     PostHead.appendChild(MainText);
                     Post.appendChild(PostHead);
                     Post.appendChild(PostImage);
-                    Post.appendChild(text)
+                    Post.appendChild(text);
                     Post.appendChild(plot);
                     
                     //Get the html where you want to place the text
@@ -51,7 +51,6 @@ window.onload = function() {
                     
                     //add last things
                     Flex.appendChild(Post);
-
                 }
             }
         );
