@@ -5,7 +5,7 @@
 //LINK: https://jsonhost.com/json/e61f2b6a8d00a02fdb3a4d181ba10b0d
 
 window.onload = function() {
-    fetch("./posts.json")
+    fetch("/posts.json")
             .then((response) => response.json())
             .then(json => {
                 console.log(json);
