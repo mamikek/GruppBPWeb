@@ -29,6 +29,7 @@ body {
     width: 100%;
     border: 3px solid #739e49;
     background-color: #2e2b2b;
+    border-image: linear-gradient(to right, #739e49, rgb(0, 0, 0)) 1;
     border-radius: 10px;
     position: sticky;
     display: flex;
@@ -49,7 +50,7 @@ body {
   }
   
   header a:hover {
-    color: aquamarine;
+    color: rgb(0, 110, 74);
   }
   
   /* Footer Styling */
@@ -58,6 +59,7 @@ body {
     padding: 15px;
     border: 3px solid #739e49;
     background-color: #2e2b2b;
+    border-image: linear-gradient(to right, #739e49, rgb(0, 0, 0)) 1;
     border-radius: 10px;
     text-align: center;
     width: 100%;
@@ -132,7 +134,7 @@ body {
   }
   
   .signup-button {
-    background: #739e49;
+    background: #4650aa;
     color: white;
     padding: 10px;
     border: none;
@@ -144,7 +146,7 @@ body {
   }
   
   .signup-button:hover {
-    background: aquamarine;
+    background: rgb(0, 110, 74);
   }
 
   .posts {
@@ -163,6 +165,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     border: 3px solid #739e49;
+    border-image: linear-gradient(to right, #739e49, rgb(0, 0, 0)) 1;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     color: white;
     width: 100%;
@@ -183,7 +186,7 @@ body {
   }
   
   .like-section button {
-    background: #739e49;
+    background: #4650aa;
     color: white;
     padding: 5px 10px;
     border: none;
@@ -192,13 +195,13 @@ body {
   }
   
   .like-section button:hover {
-    background: aquamarine;
+    background: rgb(0, 110, 74);
   }
   
   .reset-likes {
     margin-top: 20px;
     padding: 10px 20px;
-    background: #739e49;
+    background: #4650aa;
     color: white;
     border: none;
     border-radius: 5px;
@@ -206,9 +209,21 @@ body {
   }
   
   .reset-likes:hover {
-    background: aquamarine;
+    background: rgb(0, 110, 74);
   }
   
+  body {
+    background: linear-gradient(0deg, #2e2b2b, #739e49, #2e2b2b);
+    background-size: 600% 600%;
+
+    animation: GradientAnima 40s ease infinite;
+}
+
+@keyframes GradientAnima {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
  
   
   
