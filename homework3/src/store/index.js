@@ -11,5 +11,16 @@ export default new Vuex.Store({
       
     ],
   },
+  mutations: {
+    incrementLike(state, postId) {
+      const post = state.posts.find((p) => p.id === postId);
+      if (post) post.likes++;
+    },
+    resetLikes(state) {
+      state.posts.forEach((post) => {
+        post.likes = 0;
+      });
+    },
+  },
   
 });

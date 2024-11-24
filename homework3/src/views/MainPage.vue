@@ -1,6 +1,6 @@
 <template>
     <div class="main-page">
-      <h1>Main Page</h1>
+      <h1>Home Page</h1>
       <div class="posts">
         <div class="post" v-for="post in posts" :key="post.id">
         
@@ -8,9 +8,14 @@
             <p>{{ post.date }}</p>
             <p>{{ post.content }}</p>
           </div>
+          <div class="like-section">
+          <button @click="likePost(post.id)">👍 Like</button>
+          <span>{{ post.likes }} likes</span>
+        </div>
           
         </div>
       </div>
+      <button class="reset-likes" @click="resetLikes">Reset Likes</button>
     </div>
   </template>
   
@@ -34,6 +39,19 @@
         ],
       };
     },
+    methods: {
+    likePost(postId) {
+      const post = this.posts.find((p) => p.id === postId);
+      if (post) {
+        post.likes++;
+      }
+    },
+    resetLikes() {
+      this.posts.forEach((post) => {
+        post.likes = 0;
+      });
+    },
+  },
     
   };
   </script>
