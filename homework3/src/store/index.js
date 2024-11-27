@@ -29,28 +29,28 @@ export default createStore({
         content: 'Stop writing in this channel.',
         date: 'Nov 24, 2024',
         likes: 0,
-        image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADh...', // Truncated base64
+        image: null,
       },
       {
         id: 5,
         content: 'Noot noot!',
         date: 'Nov 24, 2024',
         likes: 0,
-        image: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxM...', // Truncated base64
+        image: null,
       },
       {
         id: 6,
         content: 'Don’t spam this channel!',
         date: 'Nov 24, 2024',
         likes: 0,
-        image: 'https://cdn.vox-cdn.com/thumbor/0c2gqszx1CPR6N6YtY4kQyAjTtc=/0x0:2282x1712/1400x788/filters:focal...',
+        image: null,
       },
       {
         id: 7,
         content: 'The night sky is beautiful',
         date: 'Nov 24, 2024',
         likes: 0,
-        image: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTE...', // Truncated base64
+        image: null,
       },
       {
         id: 8,
@@ -64,7 +64,7 @@ export default createStore({
         content: 'Cat taste good',
         date: 'Nov 24, 2024',
         likes: 0,
-        image: './../assets/Pictures/catto.png',
+        image: null,
       },
       {
         id: 10,

@@ -2,7 +2,7 @@
   <div class="post">
     <p><strong>Date:</strong> {{ post.date }}</p>
     <p>{{ post.content }}</p>
-    <img v-if="post.image" :src="post.image" alt="Post Image" />
+    <img v-if="post.image" :src="post.image" />
     <div class="like-section">
       <button @click="likePost">👍 Like</button>
       <span>{{ post.likes }} likes</span>
