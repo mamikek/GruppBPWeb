@@ -132,6 +132,14 @@ body {
     border-radius: 5px;
     width: 100%;
   }
+
+  .PostingDiv input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 94%;
+    margin-bottom: 10px;
+  }
   
   .signup-button {
     background: #4650aa;
@@ -218,6 +226,27 @@ body {
 
     animation: GradientAnima 40s ease infinite;
 }
+
+.post-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.PostingDiv {
+  background: #2e2b2b;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid #739e49;
+  border-image: linear-gradient(to right, #739e49, rgb(0, 0, 0)) 1;
+  
+
+  width: 400px;
+  color: white;
+  
+}
+
 
 @keyframes GradientAnima {
     0%{background-position:50% 0%}
