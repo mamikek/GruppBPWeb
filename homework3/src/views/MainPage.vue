@@ -9,9 +9,9 @@
         @like="likePost"
       />
     </div>
-    <nav>
+    <nav> <!--Uses same style for simplicity-->
       <button class="reset-likes" @click="resetLikes">Reset Likes</button>
-      <button class="make-a-post" @click="goToPost">Make a Post</button>
+      <button class="reset-likes" @click="goToPost">Make a Post</button>
     </nav>
   </div>
 </template>
