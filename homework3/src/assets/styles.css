@@ -113,7 +113,6 @@ body {
     border: 3px solid #739e49;
     width: 400px;
     color: white;
-    
   }
   
   .signup-form .form-group {
@@ -140,6 +139,14 @@ body {
     width: 94%;
     margin-bottom: 10px;
   }
+
+  .PostingDiv label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+
   
   .signup-button {
     background: #4650aa;
@@ -237,14 +244,14 @@ body {
 .PostingDiv {
   background: #2e2b2b;
   padding: 30px;
-  border-radius: 10px;
-  border: 3px solid #739e49;
-  border-image: linear-gradient(to right, #739e49, rgb(0, 0, 0)) 1;
   
-
+  border: 3px solid transparent;
+  border-image: linear-gradient(to right, #739e49, rgb(0, 0, 0)) 1;
+  border-radius: 10px;
+  
+  
   width: 400px;
   color: white;
-  
 }
 
 
