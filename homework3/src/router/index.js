@@ -1,16 +1,30 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import LoginPage from '../views/LoginPage.vue';
-import SignupPage from '../views/SignupPage.vue';
-import MainPage from '../views/MainPage.vue';
+import { createRouter, createWebHistory } from "vue-router";
+import MainPage from "../views/MainPage.vue";
+import LoginPage from "../views/LoginPage.vue";
+import SignupPage from "../views/SignupPage.vue";
+import ContactPage from "../views/ContactPage.vue";
 
 const routes = [
-  { path: '/', name: 'LoginPage', component: LoginPage }, // Changed login page to default
-  { path: '/signup', name: 'SignupPage', component: SignupPage },
-  { 
-    path: '/home', 
-    name: 'MainPage', 
-    component: MainPage, 
-    meta: { requiresAuth: true } // Protect the home page
+  {
+    path: "/", // Initial path directs to the LoginPage
+    name: "Login",
+    component: LoginPage,
+  },
+  {
+    path: "/home", // MainPage (home page)
+    name: "MainPage",
+    component: MainPage,
+    meta: { requiresAuth: true }, // Requires authentication
+  },
+  {
+    path: "/signup", // Signup page
+    name: "Signup",
+    component: SignupPage,
+  },
+  {
+    path: "/contacts", // Contact page
+    name: "Contacts",
+    component: ContactPage,
   },
 ];
 
@@ -19,13 +33,16 @@ const router = createRouter({
   routes,
 });
 
-// Guard to protect home page
+// Navigation Guard to control access
 router.beforeEach((to, from, next) => {
-  const isAuthenticated = !!localStorage.getItem('jwt'); // Check for JWT in localStorage
+  const isAuthenticated = !!localStorage.getItem("jwt"); // Check if JWT exists
+
   if (to.meta.requiresAuth && !isAuthenticated) {
-    next({ path: '/' }); // Redirect to login if not authenticated
+    next("/"); // Redirect to LoginPage if not authenticated
+  } else if (to.name === "Login" && isAuthenticated) {
+    next("/home"); // Redirect to MainPage if already authenticated
   } else {
-    next();
+    next(); // Proceed to the requested route
   }
 });
 

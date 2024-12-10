@@ -260,6 +260,13 @@ body {
   text-align: center;
 }
 
+/* Logout Button Styling */
+.logout-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
 .logout-button {
   background: #4650aa;
   color: white;
@@ -269,9 +276,9 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  margin-left: auto;
 }
 
 .logout-button:hover {
   background: rgb(0, 110, 74);
 }
+

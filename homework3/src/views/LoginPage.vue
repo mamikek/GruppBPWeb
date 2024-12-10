@@ -1,5 +1,5 @@
 <template>
-  <div class="signup-page"> <!-- Same class for consistent styling -->
+  <div class="signup-page">
     <form class="signup-form" @submit.prevent="login">
       <div class="form-group">
         <label for="email">Email:</label>

@@ -1,10 +1,8 @@
 <template>
   <div class="main-page">
-    <header>
-      
-      <button class="logout-button" @click="logout">Logout</button>
-    </header>
+    <h1>Home Page</h1>
     <div class="posts">
+      <!-- Iterate through posts and pass them to PostComponent -->
       <PostComponent
         v-for="post in posts"
         :key="post.id"
@@ -12,36 +10,41 @@
         @like="likePost"
       />
     </div>
+    
     <nav>
       <button class="reset-likes" @click="resetLikes">Reset Likes</button>
-      <button class="reset-likes" @click="goToPost">Make a Post</button>
+      <button class="add-post" @click="goToPost">Add Post</button>
     </nav>
+    
+    <button class="logout-button" @click="logout">Logout</button>
   </div>
 </template>
-
-<!-- The main page fetches posts from Vuex and passes them to the PostComponent. -->
 
 <script>
 import { mapGetters, mapActions } from "vuex";
 import PostComponent from "../components/PostComponent.vue";
 
 export default {
-  components: { PostComponent }, // register PostComponent
+  components: { PostComponent }, // Register PostComponent
   computed: {
-    ...mapGetters(["getPosts"]), // Map the Vuex getter to fetch posts
+    ...mapGetters(["getPosts"]), // Map Vuex getter to fetch posts
     posts() {
-      return this.getPosts; // Access posts via the getter
+      return this.getPosts; // Access posts via Vuex store
     },
   },
   methods: {
-    ...mapActions(["likePost", "resetAllLikes"]),
+    ...mapActions(["likePost", "resetAllLikes"]), // Map Vuex actions
     resetLikes() {
-      this.resetAllLikes();
+      this.resetAllLikes(); // Trigger Vuex mutation to reset likes
+    },
+    goToPost() {
+      this.$router.push("/post"); // Navigate to Add Post page
     },
     logout() {
-      localStorage.removeItem("jwt"); // Remove JWT token
-      this.$router.push("/"); // Redirect to Login Page
+      localStorage.removeItem("jwt"); // Remove JWT from storage
+      this.$router.push("/"); // Redirect to LoginPage
     },
   },
 };
 </script>
+
