@@ -97,72 +97,7 @@ body {
     text-align: center;
   }
   
-/* Signup page styling */
-  .signup-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    padding: 20px;
-  }
-  
-  .signup-form {
-    background: #2e2b2b;
-    padding: 30px;
-    border-radius: 10px;
-    border: 3px solid #739e49;
-    width: 400px;
-    color: white;
-  }
-  
-  .signup-form .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .signup-form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  .signup-form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-  }
 
-  .PostingDiv input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 94%;
-    margin-bottom: 10px;
-  }
-
-  .PostingDiv label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-  }
-
-
-  
-  .signup-button {
-    background: #4650aa;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .signup-button:hover {
-    background: rgb(0, 110, 74);
-  }
 
   .posts {
     display: flex;
@@ -262,4 +197,65 @@ body {
 }
  
   
-  
+/* General Styling for Signup and Login Pages */
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.signup-form {
+  background: #2e2b2b;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid #739e49;
+  border-image: linear-gradient(to right, #739e49, rgb(0, 0, 0)) 1;
+  width: 400px;
+  color: white;
+}
+
+.signup-form .form-group {
+  margin-bottom: 15px;
+}
+
+.signup-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.signup-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.signup-button {
+  background: rgb(0, 110, 74);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.signup-button:hover {
+  background: rgb(0, 110, 74);
+}
+
+.error-messages {
+  margin-top: 10px;
+  color: red;
+  font-size: 14px;
+}
+
+.signup-redirect {
+  margin-top: 15px;
+  text-align: center;
+}
