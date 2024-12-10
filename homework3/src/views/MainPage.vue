@@ -1,6 +1,9 @@
 <template>
   <div class="main-page">
-    <h1>Home Page</h1>
+    <header>
+      
+      <button class="logout-button" @click="logout">Logout</button>
+    </header>
     <div class="posts">
       <PostComponent
         v-for="post in posts"
@@ -9,7 +12,7 @@
         @like="likePost"
       />
     </div>
-    <nav> <!--Uses same style for simplicity-->
+    <nav>
       <button class="reset-likes" @click="resetLikes">Reset Likes</button>
       <button class="reset-likes" @click="goToPost">Make a Post</button>
     </nav>
@@ -34,6 +37,10 @@ export default {
     ...mapActions(["likePost", "resetAllLikes"]),
     resetLikes() {
       this.resetAllLikes();
+    },
+    logout() {
+      localStorage.removeItem("jwt"); // Remove JWT token
+      this.$router.push("/"); // Redirect to Login Page
     },
   },
 };
