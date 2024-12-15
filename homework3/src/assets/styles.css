@@ -282,3 +282,31 @@ body {
   background: rgb(0, 110, 74);
 }
 
+/*quick styling for add post button */
+.add-post-button {
+  background: #4650aa;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.add-post-button:hover {
+  background: rgb(0, 110, 74);
+}
+
+/*quick styling for delete all posts button*/
+.delete-posts-button {
+  background: #000301;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
