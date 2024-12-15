@@ -23,15 +23,16 @@ const execute = async(query1, query2) => {
 const createTblQuery1 = `
     CREATE TABLE IF NOT EXISTS "posters" (
 	    "id" SERIAL PRIMARY KEY,         
-	    "title" VARCHAR(200) NOT NULL,
-        "picture" VARCHAR(200)  
+	    "title" VARCHAR(500) NOT NULL,
+        "picture" VARCHAR(500),
+        "date" VARCHAR(200)
     );`;
 
 const createTblQuery2 = `
     CREATE TABLE IF NOT EXISTS "users" (
         id SERIAL PRIMARY KEY,
-        email VARCHAR(200) NOT NULL UNIQUE,
-        password VARCHAR(200) NOT NULL 
+        email VARCHAR(500) NOT NULL UNIQUE,
+        password VARCHAR(500) NOT NULL 
     );`;
 
 
