@@ -29,7 +29,7 @@ const createTblQuery1 = `
 
 const createTblQuery2 = `
     CREATE TABLE IF NOT EXISTS "users" (
-        id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        id SERIAL PRIMARY KEY,
         email VARCHAR(200) NOT NULL UNIQUE,
         password VARCHAR(200) NOT NULL 
     );`;
