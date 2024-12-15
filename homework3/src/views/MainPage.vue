@@ -3,7 +3,6 @@
     <h1>Home Page</h1>
 
     <nav>
-      <button class="reset-likes" @click="resetLikes">Reset Likes</button>
       <button class="add-post-button" @click="goToPost">Add Post</button>
       <button class="delete-posts-button" @click="deleteAllPosts">Delete all posts</button>
       <button class="logout-button" @click="logout">Logout</button>

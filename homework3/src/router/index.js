@@ -33,11 +33,12 @@ const routes = [
     path: "/post", // Posting page
     name: "post",
     component: PostPage,
-  },
+    meta: { requiresAuth: true },  },
   {
     path: "/home/EditPage/:id", // Edit page
     name: "EditPage",
     component: EditPage,
+    meta: { requiresAuth: true },
   },
 ];
 
