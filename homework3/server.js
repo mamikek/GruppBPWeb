@@ -125,18 +125,17 @@ app.put('/api/home/:id', async(req, res) => {
   }
 });
 
-app.delete('/api/home/:id', async(req, res) => {
+app.delete('/home', async (req, res) => {
   try {
-      const { id } = req.params;
-      console.log("delete a post request has arrived");
-      const deletepost = await pool.query(
-          "DELETE FROM posters WHERE id = $1 RETURNING*", [id]
-      );
-      res.json(deletepost);
+    console.log("Delete all posts request has arrived");
+    await pool.query("DELETE FROM posters");
+    res.status(200).json({ message: "All posts have been deleted." });
   } catch (err) {
-      console.error(err.message);
+    console.error("Error deleting all posts:", err.message);
+    res.status(500).json({ message: "Error deleting posts" });
   }
 });
+
 
 //Listens for the port and needs to be last
 app.listen(port, () => {
