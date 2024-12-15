@@ -53,6 +53,21 @@ export default {
       this.$router.push("/"); // Redirect to LoginPage
     },
   },
+  mounted() {
+    fetch("http://localhost:3000/home")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch posts");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        this.$store.commit("setPosts", data);
+      })
+      .catch((error) => {
+        console.error("Error fetching posts:", error);
+      });
+  },
 };
 </script>
 
