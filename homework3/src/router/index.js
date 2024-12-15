@@ -4,6 +4,8 @@ import LoginPage from "../views/LoginPage.vue";
 import SignupPage from "../views/SignupPage.vue";
 import ContactPage from "../views/ContactPage.vue";
 import PostPage from "../views/PostPage.vue";
+import EditPage from "../views/EditPage.vue";
+
 
 const routes = [
   {
@@ -28,9 +30,14 @@ const routes = [
     component: ContactPage,
   },
   {
-    path: "/post", // Contact page
+    path: "/post", // Posting page
     name: "post",
     component: PostPage,
+  },
+  {
+    path: "/home/EditPage/:id", // Edit page
+    name: "EditPage",
+    component: EditPage,
   },
 ];
 

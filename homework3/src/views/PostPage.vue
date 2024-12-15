@@ -1,6 +1,6 @@
 <template>
     <div class="post-page">
-        <div class="PostingDiv" @submit.prevent="checkPost">
+        <div class="PostingDiv">
             <h1>Add Post</h1>
             <label for="title">Body: </label>
             <input name="title" type="title" id="title" required v-model="post.title">
@@ -30,7 +30,7 @@ export default {
                 title: this.post.title, //give title the data from "title" input
                 picture: this.post.picture, //give picture the data from "picture" input
             };
-            fetch("http://localhost:3000/post", {
+            fetch("http://localhost:3000/home", { //Get the id from homepage
                 method: "POST",
                 headers: { "Content-type": "application/json"},
                 body: JSON.stringify(data)

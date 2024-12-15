@@ -69,17 +69,73 @@ app.post('/login', async (req, res) => {
   }
 });
 
+// PostPage aka the add post function for server
 app.post('/post', async (req, res) => {
     try {
       console.log("A post request is arrived");
       const post = req.body;
-      const newpost = await pool.query('INSERT INTO posttable(title, picture) values ($1, $2) RETURNING*' [post.title, post.picture]
-        )
+      const newpost = await pool.query('INSERT INTO Posters(title, picture) values ($1, $2) RETURNING*' [post.title, post.picture]
+        );
+        res.json(newpost);
       } catch(err) {
         console.error(err.message)
       }
   });
 
+  // Load posts at home(mainpage)
+app.get('/home', async(req, res) => {
+  try {
+      console.log("get posts request has arrived");
+      const posts = await pool.query(
+          "SELECT * FROM Posters"
+      );
+      res.json(posts.rows);
+  } catch (err) {
+      console.error(err.message);
+  }
+});
+
+app.get('/api/posts/:id', async(req, res) => {
+  try {
+      console.log("get a post with route parameter  request has arrived");
+      const { id } = req.params;
+      const posts = await pool.query(
+          "SELECT * FROM Posters WHERE id = $1", [id]
+      );
+      res.json(posts.rows[0]);
+  } catch (err) {
+      console.error(err.message);
+  }
+});
+
+app.put('/api/posts/:id', async(req, res) => {
+  try {
+      const { id } = req.params;
+      const post = req.body;
+      console.log("update request has arrived");
+      const updatepost = await pool.query(
+          "UPDATE Posters SET (title, picture) = ($2, $3) WHERE id = $1 RETURNING*", [id, post.title, post.picture]
+      );
+      res.json(updatepost);
+  } catch (err) {
+      console.error(err.message);
+  }
+});
+
+app.delete('/api/posts/:id', async(req, res) => {
+  try {
+      const { id } = req.params;
+      console.log("delete a post request has arrived");
+      const deletepost = await pool.query(
+          "DELETE FROM Posters WHERE id = $1 RETURNING*", [id]
+      );
+      res.json(deletepost);
+  } catch (err) {
+      console.error(err.message);
+  }
+});
+
+//Listens for the port and needs to be last
 app.listen(port, () => {
   console.log(`Server is listening to port ${port}`);
 });

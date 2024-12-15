@@ -5,6 +5,7 @@
     <img v-if="post.image" :src="post.image" />
     <div class="like-section">
       <button @click="likePost">👍 Like</button>
+      <button @click="editPost">⚙️ Edit</button>
       <span>{{ post.likes }} likes</span>
     </div>
   </div>
@@ -23,6 +24,9 @@ export default {
     likePost() {
       this.$emit("like", this.post.id);
     },
+    editPost() {
+      this.$emit()
+    }
   },
 };
 </script>
