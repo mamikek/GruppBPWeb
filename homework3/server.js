@@ -98,7 +98,7 @@ app.get('/home', async(req, res) => {
   }
 });
 
-app.get('/api/home/:id', async(req, res) => {
+app.get('/home/:id', async(req, res) => {
   try {
       console.log("get a post with route parameter request has arrived");
       const { id } = req.params;
@@ -111,7 +111,7 @@ app.get('/api/home/:id', async(req, res) => {
   }
 });
 
-app.put('/api/home/:id', async(req, res) => {
+app.put('/home/:id', async(req, res) => {
   try {
       const { id } = req.params;
       const post = req.body;
@@ -125,7 +125,11 @@ app.put('/api/home/:id', async(req, res) => {
   }
 });
 
+<<<<<<< HEAD
 app.delete('/home', async (req, res) => {
+=======
+app.delete('/home/:id', async(req, res) => {
+>>>>>>> 03d15188519d4cec5573329efdbf34277291aad4
   try {
     console.log("Delete all posts request has arrived");
     await pool.query("DELETE FROM posters");

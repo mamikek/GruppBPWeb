@@ -1,12 +1,10 @@
 <template>
   <div class="post">
     <p><strong>Date:</strong> {{ post.date }}</p>
-    <p>{{ post.content }}</p>
-    <img v-if="post.image" :src="post.image" />
+    <p>{{ post.title }}</p>
+    <img v-if="post.picture" :src="post.picture" />
     <div class="like-section">
-      <button @click="likePost">👍 Like</button>
       <button @click="editPost">⚙️ Edit</button>
-      <span>{{ post.likes }} likes</span>
     </div>
   </div>
 </template>
