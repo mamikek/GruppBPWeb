@@ -26,47 +26,48 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
 import PostComponent from "../components/PostComponent.vue";
 
 export default {
-  components: { PostComponent }, // Register PostComponent
-  computed: {
-    ...mapGetters(["getPosts"]), // Map Vuex getter to fetch posts
-    posts() {
-      return this.getPosts; // Access posts via Vuex store
-    },
+  components: { PostComponent },
+  data() {
+    return {
+      posts: [],
+    };
   },
   methods: {
-    ...mapActions(["likePost", "resetAllLikes"]), // Map Vuex actions
     resetLikes() {
-      this.resetAllLikes(); // Trigger Vuex mutation to reset likes
+      this.posts.forEach((post) => {
+        post.likes = 0;
+      });
+    },
+    likePost(postId) {
+      const post = this.posts.find((p) => p.id === postId);
+      if (post) post.likes++;
     },
     goToPost() {
-      this.$router.push("/post"); // Navigate to Add Post page
+      this.$router.push("/post");
     },
     deleteAllPosts() {
-      console.log('all posts deleted')
+      console.log("All posts deleted");
     },
     logout() {
-      localStorage.removeItem("jwt"); // Remove JWT from storage
-      this.$router.push("/"); // Redirect to LoginPage
+      localStorage.removeItem("jwt");
+      this.$router.push("/");
+    },
+    fetchPosts() {
+      fetch("http://localhost:3000/home")
+        .then((response) => response.json())
+        .then((data) => {
+          this.posts = data;
+        })
+        .catch((error) => {
+          console.error("Error fetching posts:", error);
+        });
     },
   },
   mounted() {
-    fetch("http://localhost:3000/home")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch posts");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        this.$store.commit("setPosts", data);
-      })
-      .catch((error) => {
-        console.error("Error fetching posts:", error);
-      });
+    this.fetchPosts();
   },
 };
 </script>
