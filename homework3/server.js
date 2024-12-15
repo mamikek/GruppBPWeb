@@ -98,7 +98,7 @@ app.get('/home', async(req, res) => {
   }
 });
 
-app.get('/api/home/:id', async(req, res) => {
+app.get('/home/:id', async(req, res) => {
   try {
       console.log("get a post with route parameter request has arrived");
       const { id } = req.params;
@@ -111,7 +111,7 @@ app.get('/api/home/:id', async(req, res) => {
   }
 });
 
-app.put('/api/home/:id', async(req, res) => {
+app.put('/home/:id', async(req, res) => {
   try {
       const { id } = req.params;
       const post = req.body;
@@ -125,7 +125,7 @@ app.put('/api/home/:id', async(req, res) => {
   }
 });
 
-app.delete('/api/home/:id', async(req, res) => {
+app.delete('/home/:id', async(req, res) => {
   try {
       const { id } = req.params;
       console.log("delete a post request has arrived");
