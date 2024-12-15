@@ -69,6 +69,17 @@ app.post('/login', async (req, res) => {
   }
 });
 
+app.post('/post', async (req, res) => {
+    try {
+      console.log("A post request is arrived");
+      const post = req.body;
+      const newpost = await pool.query('INSERT INTO posttable(title, picture) values ($1, $2) RETURNING*' [post.title, post.picture]
+        )
+      } catch(err) {
+        console.error(err.message)
+      }
+  });
+
 app.listen(port, () => {
   console.log(`Server is listening to port ${port}`);
 });

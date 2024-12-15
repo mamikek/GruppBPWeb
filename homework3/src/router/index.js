@@ -3,6 +3,7 @@ import MainPage from "../views/MainPage.vue";
 import LoginPage from "../views/LoginPage.vue";
 import SignupPage from "../views/SignupPage.vue";
 import ContactPage from "../views/ContactPage.vue";
+import PostPage from "../views/PostPage.vue";
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: "/contacts", // Contact page
     name: "Contacts",
     component: ContactPage,
+  },
+  {
+    path: "/post", // Contact page
+    name: "post",
+    component: PostPage,
   },
 ];
 
