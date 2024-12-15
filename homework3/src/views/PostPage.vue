@@ -25,7 +25,7 @@ export default {
         };
     },
     methods: {
-        async addPost() { //@click addPost method
+        addPost() { //@click addPost method
             var data = {
                 title: this.post.title, //give title the data from "title" input
                 picture: this.post.picture, //give picture the data from "picture" input

@@ -21,7 +21,7 @@ const execute = async(query1, query2) => {
 };
 
 const createTblQuery1 = `
-    CREATE TABLE IF NOT EXISTS "Posters" (
+    CREATE TABLE IF NOT EXISTS "posters" (
 	    "id" SERIAL PRIMARY KEY,         
 	    "title" VARCHAR(200) NOT NULL,
         "picture" VARCHAR(200)  
@@ -39,7 +39,7 @@ const createTblQuery2 = `
 // A function to execute the previous query   
 execute(createTblQuery1, createTblQuery2).then(result => {
     if (result) {
-        console.log('If does not exists, table "users" and  table "Posters" are created');
+        console.log('If does not exists, table "users" and  table "posters" are created');
     }
 });
 

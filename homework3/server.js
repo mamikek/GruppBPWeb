@@ -70,13 +70,16 @@ app.post('/login', async (req, res) => {
 });
 
 // PostPage aka the add post function for server
-app.post('/post', async (req, res) => {
+app.post('/home', async (req, res) => {
     try {
       console.log("A post request is arrived");
       const post = req.body;
-      const newpost = await pool.query('INSERT INTO Posters(title, picture) values ($1, $2) RETURNING*' [post.title, post.picture]
+      const newpost = await pool.query(
+        'INSERT INTO posters(title, picture) values ($1, $2) RETURNING*',
+        [post.title, post.picture]
         );
         res.json(newpost);
+        console.log("A post request is completed");
       } catch(err) {
         console.error(err.message)
       }
@@ -87,7 +90,7 @@ app.get('/home', async(req, res) => {
   try {
       console.log("get posts request has arrived");
       const posts = await pool.query(
-          "SELECT * FROM Posters"
+          "SELECT * FROM posters"
       );
       res.json(posts.rows);
   } catch (err) {
@@ -95,12 +98,12 @@ app.get('/home', async(req, res) => {
   }
 });
 
-app.get('/api/posts/:id', async(req, res) => {
+app.get('/api/home/:id', async(req, res) => {
   try {
-      console.log("get a post with route parameter  request has arrived");
+      console.log("get a post with route parameter request has arrived");
       const { id } = req.params;
       const posts = await pool.query(
-          "SELECT * FROM Posters WHERE id = $1", [id]
+          "SELECT * FROM posters WHERE id = $1", [id]
       );
       res.json(posts.rows[0]);
   } catch (err) {
@@ -108,13 +111,13 @@ app.get('/api/posts/:id', async(req, res) => {
   }
 });
 
-app.put('/api/posts/:id', async(req, res) => {
+app.put('/api/home/:id', async(req, res) => {
   try {
       const { id } = req.params;
       const post = req.body;
       console.log("update request has arrived");
       const updatepost = await pool.query(
-          "UPDATE Posters SET (title, picture) = ($2, $3) WHERE id = $1 RETURNING*", [id, post.title, post.picture]
+          "UPDATE posters SET (title, picture) = ($2, $3) WHERE id = $1 RETURNING*", [id, post.title, post.picture]
       );
       res.json(updatepost);
   } catch (err) {
@@ -122,12 +125,12 @@ app.put('/api/posts/:id', async(req, res) => {
   }
 });
 
-app.delete('/api/posts/:id', async(req, res) => {
+app.delete('/api/home/:id', async(req, res) => {
   try {
       const { id } = req.params;
       console.log("delete a post request has arrived");
       const deletepost = await pool.query(
-          "DELETE FROM Posters WHERE id = $1 RETURNING*", [id]
+          "DELETE FROM posters WHERE id = $1 RETURNING*", [id]
       );
       res.json(deletepost);
   } catch (err) {
