@@ -48,7 +48,23 @@ export default {
       this.$router.push("/post");
     },
     deleteAllPosts() {
-      console.log("All posts deleted");
+      if (confirm("Are you sure you want to delete all posts? This action cannot be undone.")) {
+        fetch("http://localhost:3000/home", {
+          method: "DELETE",
+        })
+          .then((response) => {
+            if (response.ok) {
+              this.posts = []; // Clear posts locally
+              alert("All posts have been deleted.");
+            } else {
+              throw new Error("Failed to delete posts.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error deleting posts:", error);
+            alert("An error occurred while deleting posts.");
+          });
+      }
     },
     logout() {
       localStorage.removeItem("jwt");
